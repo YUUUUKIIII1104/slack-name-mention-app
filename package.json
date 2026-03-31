@@ -1,0 +1,25 @@
+{
+  "name": "slack-name-mention-app",
+  "version": "2.0.0",
+  "description": "Slack bot that detects names in images and mentions matching users",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test-apis": "node tests/test-slack.js && node tests/test-vision.js && node tests/test-gemini.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vision": "^4.3.2",
+    "@google/generative-ai": "^0.21.0",
+    "@slack/bolt": "^4.1.0",
+    "@slack/web-api": "^7.6.0",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
