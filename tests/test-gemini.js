@@ -6,7 +6,7 @@ async function testGeminiAPI() {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     
     // モデル名を修正
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     console.log('✅ Gemini API接続成功!');
 
@@ -53,16 +53,7 @@ async function testGeminiAPI() {
     console.error('❌ Gemini API エラー:', error.message);
     
     // 利用可能なモデルを確認
-    console.log('\n利用可能なモデルを確認中...');
-    try {
-      const models = await genAI.listModels();
-      console.log('利用可能なモデル:');
-      models.forEach(model => {
-        console.log(`- ${model.name}`);
-      });
-    } catch (listError) {
-      console.log('モデル一覧取得エラー:', listError.message);
-    }
+    console.log('\n利用可能なモデルの確認は https://ai.google.dev/gemini-api/docs/models を参照してください');
   }
 }
 

@@ -4,7 +4,7 @@ const config = require('../config');
 class NameConverter {
   constructor() {
     this.genAI = new GoogleGenerativeAI(config.geminiApiKey);
-    this.model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    this.model = this.genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     this.commonNames = new Map([
       ['田中', { hiragana: 'たなか', katakana: 'タナカ', romaji: 'tanaka' }],
